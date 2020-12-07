@@ -1,0 +1,10 @@
+<%= form_for [post, comment] do |f| %>
+  <div class="bg-white rounded-card mt-2 pt-2 border-0 d-flex align-items-top">
+    <div class="col">
+      <%= f.text_field :body, {id: "name", class: "form-control mb-2", placeholder: "Add comment" } %>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-secondary border-0 gradient float-right">Comment</button>
+    </div>
+  </div>
+<% end %>

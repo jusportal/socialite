@@ -1,0 +1,10 @@
+<% content_for :feed do %>
+  <div class="bg-white rounded-card mt-2 p-4 border-0 ">
+    <h6>What's on your mind?</h5>
+    <%= render "shared/posts/form" %>
+  </div>
+  <%= render "shared/posts" %>
+<% end %>
+
+<%= render 'layouts/feed' %>
+

@@ -1,0 +1,1 @@
+$("#<%= @post.id %>-reactions").html("<%= escape_javascript(render partial: 'shared/reaction_triggers', locals: { post: @post }) %>");

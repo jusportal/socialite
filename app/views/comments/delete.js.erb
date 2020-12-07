@@ -1,0 +1,3 @@
+$('#common-modal').modal('show');
+$(".modal-title").text("Are you sure?");
+$(".modal-body").html("<%= escape_javascript(render 'comments/partials/delete') %>");

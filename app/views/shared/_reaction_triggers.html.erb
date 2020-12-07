@@ -1,0 +1,17 @@
+<div class="d-flex">
+  <%= button_to react_post_path(post), params: { reaction: { reaction_type: :like }}, class: "btn btn-sm btn-light m-1", remote: true do %>
+    <i class="fas fa-thumbs-up text-secondary"></i> <%= post.likes %>
+  <% end %>
+
+  <%= button_to react_post_path(post), params: { reaction: { reaction_type: :heart }}, class: "btn btn-sm btn-light m-1", remote: true do %>
+    <i class="fas fa-heart text-secondary"></i> <%= post.hearts %>
+  <% end %>
+
+  <%= button_to react_post_path(post), params: { reaction: { reaction_type: :frown }}, class: "btn btn-sm btn-light m-1", remote: true do %>
+    <i class="fas fa-frown text-secondary"></i> <%= post.frowns %>
+  <% end %>
+
+  <%= link_to post_path(post), class: "btn btn-sm btn-light m-1" do %>
+    <i class="fas fa-comments text-secondary"></i> <%= post.comments_count %>
+  <% end %>
+</div>

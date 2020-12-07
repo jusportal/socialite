@@ -1,0 +1,21 @@
+<%= form_for @post do |f| %>
+  <div class="form-row">
+    <div class="col">
+      <div class="<%= 'has-error' if @post.errors.include?(:body) %>">
+        <% if @post.errors.include?(:body) %>
+          <span class="error"> <%= @post.errors[:body].first %></span>
+        <% end %>
+        <%= f.text_area :body, {id: "name", class: "form-control" } %>
+      </div>
+    </div>
+    <%= f.file_field :photo, id: "photo-upload", accept: ".png, .jpg, .jpeg", hidden: true %>
+  </div>
+
+  <div class="mt-3">
+    <label class="btn btn-light" for="photo-upload">
+      <i class="fas fa-camera"></i>
+    </label>
+
+    <button type="submit" class="btn btn-secondary border-0 gradient float-right">Post</button>
+  </div>
+<% end %>

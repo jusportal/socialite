@@ -1,0 +1,19 @@
+<% content_for :feed do %>
+  <div class="bg-primary text-white rounded-card p-2 mt-2">
+    <div class="d-block">
+      <div class="d-flex align-items-top">
+        <%= image_tag @user.avatar.profile.url, class: "rounded-circle avatar-circle", width: "50", height: "50" %>
+        <div>
+          <div class="font-weight-bolder"><%=  @user.name %></div>
+          <small class="d-block">Joined:<%= @user.created_at.strftime("%b %d, %Y") %></small>
+          <small class="d-block">Post Count: <%= @user.posts.to_a.size %></small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render "shared/posts" %>
+<% end %>
+
+<%= render 'layouts/feed' %>
+

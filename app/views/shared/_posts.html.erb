@@ -1,0 +1,7 @@
+<ul class="list-group list-group-flush bg-light rounded-card">
+  <% @posts.each do |post| %>
+    <li class="list-group-item rounded-card d-flex justify-content-between align-items-top mt-2 border-0 ">
+      <%= render partial: "posts/partials/post", locals: { post: post } %>
+    </li>
+  <% end %>
+</ul>

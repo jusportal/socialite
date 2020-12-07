@@ -1,0 +1,10 @@
+<% content_for :feed do %>
+  <div class="bg-white rounded-card mt-2 p-4 border-0 d-flex justify-content-between align-items-top">
+    <%= render partial: "posts/partials/post", locals: { post: @post } %>
+  </div>
+
+  <%= render partial: "shared/comments/form", locals: { post: @post, comment: @comment } %>
+  <%= render "shared/comments" %>
+<% end %>
+
+<%= render 'layouts/feed' %>

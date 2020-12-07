@@ -1,0 +1,11 @@
+<%= render 'shared/navbar' %>
+
+<main class="mb-5" style="margin-top: 65px;">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <%= yield :feed %>
+    </div>
+  </div>
+</main>
+
+<%= render 'shared/modal' %>

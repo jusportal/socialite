@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  root to: "feed#index"
+
+  resources :posts do
+    member do
+      get "delete" => "posts#delete", as: :delete
+      post "react" => "reactions#create", as: :react
+    end
+
+    resources :comments do
+      member do
+        get "delete" => "comments#delete", as: :delete
+      end
+    end
+  end
+
+  resources :users, path: "profile", only: [:show]
 end
