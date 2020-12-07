@@ -11,8 +11,6 @@ import jquery from 'jquery';
 window.$ = window.jquery = jquery;
 import "bootstrap";
 
-require("packs/actions")
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
